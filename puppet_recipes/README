@@ -1,0 +1,5 @@
+* Denyhosts: recipe for configuring denyhosts (http://denyhosts.sf.net) as well as a whitelist
+* locale: just testing...
+* logcheck: recipe for configuring logcheck on ubuntu
+* monit: monit config and sample checks
+* Puppetconf: configure puppet using puppet (hopefully)
