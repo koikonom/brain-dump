@@ -1,0 +1,5 @@
+check process postfix with pidfile  /var/spool/postfix/pid/master.pid
+   start program = "/etc/init.d/postfix start"
+   stop program = "/etc/init.d/postfix stop"
+   if failed host 127.0.0.1 port 25 protocol smtp then alert
+   if 5 restarts within 5 cycles then timeout

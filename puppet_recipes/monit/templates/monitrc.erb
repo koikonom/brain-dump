@@ -1,0 +1,14 @@
+set daemon  120
+set logfile syslog facility log_daemon                       
+set mailserver localhost
+
+set alert root@<%= fqdn %>
+mail-format {
+    from: monit@$HOST
+    subject: [monit] $HOST $SERVICE $EVENT at $DATE
+    message: Monit $ACTION $SERVICE at $DATE on $HOST: $DESCRIPTION
+    }
+
+include /etc/monit.d/*
+
+

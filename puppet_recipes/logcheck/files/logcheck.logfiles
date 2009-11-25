@@ -1,0 +1,6 @@
+# these files will be checked by logcheck
+# This has been tuned towards a default syslog install
+/var/log/syslog
+/var/log/auth.log
+/var/log/apache2/error.log
+/var/log/mail.log
