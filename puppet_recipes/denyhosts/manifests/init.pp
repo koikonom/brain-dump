@@ -2,14 +2,6 @@ class denyhosts {
 
     package { denyhosts: ensure => latest }
 
-    file { "/etc/hosts.allow":
-        owner   => root,
-        group   => root,
-        mode    => 440,
-        source  => "puppet://puppetmaster.example.com/denyhosts/hosts.allow",
-        require => Package["denyhosts"],
-    }
-
     file { "/etc/denyhosts.conf":
         owner   => root,
         group   => root,
